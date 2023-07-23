@@ -951,6 +951,7 @@ void io::Parser::initRPin_rpin() {
                << " from " << net->getName() << " has nullptr as prefAP\n";  
         }
 
+        // [cptsai] The following code will set access point without considering whether it is nullptr or not. Hence, it will cause segfault when you try to access the access point in the future.
         rpin->setAccessPoint(prefAp);
 
         net->addRPin(rpin);

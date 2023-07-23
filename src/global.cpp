@@ -85,7 +85,9 @@ frLayerNum ONGRIDONLY_WIRE_NONPREF_TOPLAYERNUM    = std::numeric_limits<frLayerN
 frLayerNum ONGRIDONLY_VIA_BOTTOMLAYERNUM          = std::numeric_limits<frLayerNum>::max();
 frLayerNum ONGRIDONLY_VIA_TOPLAYERNUM             = std::numeric_limits<frLayerNum>::min();
 
-frLayerNum VIA_ACCESS_LAYERNUM = 2;
+// frLayerNum VIA_ACCESS_LAYERNUM = 2;
+// cptsai
+frLayerNum VIA_ACCESS_LAYERNUM = 6;
 
 int END_ITERATION = 80;
 

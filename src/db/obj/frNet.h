@@ -194,7 +194,7 @@ namespace fr {
     }
     void addRPin(std::unique_ptr<frRPin> &in) {
       in->addToNet(this);
-      rpins.push_back(std::move(in));      
+      rpins.push_back(std::move(in));
     }
     void addGuide(std::unique_ptr<frGuide> &in) {
       auto rptr = in.get();
