@@ -425,6 +425,11 @@ void FlexPA::prepPoint_pin_genPoints_layerShapes(vector<unique_ptr<frAccessPoint
           layerNum <= VIA_ACCESS_LAYERNUM) {
         // if (DBPROCESSNODE == "GF14_13M_3Mx_2Cx_4Kx_2Hx_2Gx_LB") {
           allowPlanar = false;
+          // cptsai
+          if (instTerm->getInst()->getRefBlock()->getName() == "FTVX1") {
+            allowPlanar = true;
+            // cout << "[cptsai] allow planar for FTVX1" << endl;
+          }
         // }
       }
     } else if (instTerm->getInst()->getRefBlock()->getMacroClass() == MacroClassEnum::BLOCK ||
